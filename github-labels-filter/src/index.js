@@ -7,7 +7,7 @@ const octokit = new Octokit({
 module.exports = {
   async onPreBuild({constants, utils}) {
     const labelName = getLabelName()
-    if (!ownerRepo) {
+    if (!labelName) {
       console.warn("Failed to label name")
       return
     }

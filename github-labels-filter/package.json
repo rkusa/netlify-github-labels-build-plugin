@@ -1,0 +1,7 @@
+{
+  "name": "github-labels-filter",
+  "main": "src/index.js",
+  "dependencies": {
+    "@octokit/rest": "^18.0.1"
+  }
+}

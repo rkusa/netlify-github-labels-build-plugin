@@ -30,12 +30,10 @@ module.exports = {
       per_page: 100
     })
 
-
-    console.log(constants)
-    console.log(utils.git)
-    console.log(process.env)
-    console.log(labels)
-    console.log('Hello world from onPreBuild event!')
+    const hasLabel = labels.find(label => label.name === labelName)
+    if (!hasLabel) {
+      utils.build.cancelBuild(`Skipping deployment since '${labelName}' is not added to the PR`)
+    }
   },
 }
 

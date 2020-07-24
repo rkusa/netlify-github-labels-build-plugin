@@ -1,0 +1,6 @@
+{
+  "name": "test",
+  "devDependencies": {
+    "github-labels-filter": "./github-labels-filter"
+  }
+}
